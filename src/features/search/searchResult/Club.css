@@ -1,0 +1,11 @@
+.ui.right.ribbon.label{    
+    background-color: #E0BA6A;
+    color: #ffffff;
+    position: absolute;
+    height: 40px;
+    font-family: robotoMedium;
+    font-size: 1.4em;
+    top: 10px;
+    font-weight: bold;
+  }
+ 

@@ -1,0 +1,297 @@
+.latest_result_container {
+  width: 100%;
+  min-height: 800px;
+  position: relative;
+  padding: 120px 0;
+}
+.horizontal {
+  display: none;
+}
+.result_summary {
+  display: flex;
+  height: 80px;
+  padding: 0 8px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebe7e7;
+  border: 1px solid #707070;
+  margin: 0 0 15px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #06083b;
+  color: #ffffff;
+}
+.result_detail_wrapper {
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  /* align with .result_summary so need to set bottom margin eg. 15px */
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+.result_detail {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  background-image: url("../../../assets/images/result_detail_back.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 55% 100%;
+  border: 1px solid #707070;
+}
+.left_team_result_detail,
+.right_team_result_detail {
+  width: 100%;
+  height: 100%;
+}
+/* For convience, I used two classes
+same for children */
+.left_team_result_detail_contents,
+.right_team_result_detail_contents {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+}
+.left_team_result_detail_logo,
+.right_team_result_detail_logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  height: 124px;
+}
+/* 1img for team logo, 2 for arrow and 3rd for thumb and I used different className both sides */
+.left_team_result_detail_logo img:nth-child(1) {
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  z-index: 1;
+}
+
+.left_team_result_detail_logo img:nth-child(2) {
+  height: 90px;
+  width: 120px;
+  position: absolute;
+  z-index: 0;
+  margin-top: 18px;
+  margin-left: 80px;
+}
+.left_team_result_detail_logo img:nth-child(3) {
+  position: absolute;
+  z-index: 0;
+  margin-top: 34px;
+  margin-left: 100px;
+  width: 50px;
+}
+
+.right_team_result_detail_logo img:nth-child(1) {
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  z-index: 1;
+}
+
+.right_team_result_detail_logo img:nth-child(2) {
+  height: 90px;
+  width: 120px;
+  position: absolute;
+  z-index: 0;
+  margin-top: 18px;
+  margin-left: -80px;
+}
+.right_team_result_detail_logo img:nth-child(3) {
+  position: absolute;
+  z-index: 0;
+  margin-top: 34px;
+  margin-left: -100px;
+  width: 50px;
+}
+
+.left_team_name,
+.right_team_name {
+  font-family: robotoMedium;
+  font-size: 2.666em;
+  font-weight: normal;
+}
+.left_team_score,
+.right_team_score {
+  font-family: openSansRegular;
+  font-size: 2em;
+  font-weight: bold;
+}
+.left_team_score span,
+.right_team_score span {
+  color: #037491;
+}
+.left_team_result,
+.right_team_result {
+  font-family: oswaldMedium;
+  font-size: 2em;
+  font-weight: normal;
+  color: #037491;
+}
+.result_summary_inner {
+  display: flex;
+  height: 100%;
+  color: #000000;
+  align-items: center;
+  cursor: pointer;
+}
+.teamName {
+  font-family: oswaldMedium;
+  font-weight: 400;
+  margin: auto 10px;
+  font-size: 2.5em;
+}
+.vs {
+  font-family: oswaldMedium;
+  font-weight: 400;
+  margin: auto 6px;
+  font-size: 2.6em;
+}
+.result_summary_inner img {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border: 1px solid #707070;
+}
+.view_all_button_container {
+  display: flex;
+  height: 82px;
+  background-color: #06083b;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  font-family: oswaldMedium;
+  font-weight: 400;
+  font-size: 2.7em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .left_team_result_detail_logo,
+  .right_team_result_detail_logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    width: 100%;
+    height: 90px;
+  }
+  .left_team_result_detail_logo img:nth-child(1),
+  .right_team_result_detail_logo img:nth-child(1) {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+  }
+  .left_team_result_detail_logo img:nth-child(2) {
+    height: 70px;
+    width: 90px;
+    margin-top: 6px;
+    margin-left: 60px;
+  }
+  .left_team_result_detail_logo img:nth-child(3) {
+    margin-top: 18px;
+    margin-left: 74px;
+    width: 40px;
+  }
+  .right_team_result_detail_logo img:nth-child(2) {
+    height: 70px;
+    width: 90px;
+    margin-top: 6px;
+    margin-left: -64px;
+  }
+  .right_team_result_detail_logo img:nth-child(3) {
+    margin-top: 18px;
+    margin-left: -74px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .left_team_result_detail_logo,
+  .right_team_result_detail_logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+    height: 70px;
+  }
+  .left_team_result_detail_logo img:nth-child(1),
+  .right_team_result_detail_logo img:nth-child(1) {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+  }
+  .left_team_result_detail_logo img:nth-child(2) {
+    height: 50px;
+    width: 70px;
+    margin-top: 6px;
+    margin-left: 50px;
+  }
+  .left_team_result_detail_logo img:nth-child(3) {
+    margin-top: 16px;
+    margin-left: 54px;
+    width: 30px;
+  }
+  .right_team_result_detail_logo img:nth-child(2) {
+    height: 50px;
+    width: 70px;
+    margin-top: 6px;
+    margin-left: -44px;
+  }
+  .right_team_result_detail_logo img:nth-child(3) {
+    margin-top: 16px;
+    margin-left: -50px;
+    width: 30px;
+  }
+  .result_summary {
+    height: 60px;
+  }
+  .result_summary_inner img {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+  }
+  .teamName {
+    font-size: 1.5em;
+  }
+  .vs {
+    font-size: 1.6em;
+  }
+
+  .left_team_name,
+  .right_team_name {
+    font-size: 1.666em;
+  }
+  .left_team_score,
+  .right_team_score {
+    font-size: 1em;
+  }
+  .left_team_result,
+  .right_team_result {
+    font-size: 1.2em;
+  }
+  .view_all_button_container {
+    font-size: 1.7em;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .latest_result_container {
+    height: 100%;
+    padding: 20px 0;
+  }
+  .horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+    margin: 40px auto;
+  }
+}

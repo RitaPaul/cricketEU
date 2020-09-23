@@ -1,0 +1,176 @@
+/* .ground,
+.homecards,
+.partners {
+  text-align: center;
+} */
+.match_result_container {
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+}
+.vertical_line {
+  position: absolute;
+  width: 4px;
+  top: 0px;
+  left: 50px;
+  height: 360px;
+  background-color: #000000;
+}
+.vertical_text {
+  position: absolute;
+  top: 190px;
+  left: 60px;
+  font-family: oswaldMedium;
+  font-size: 2.125em;
+  writing-mode: vertical-rl;
+}
+
+.ground {
+  width: auto;
+  position: relative;
+  overflow: hidden; 
+}
+
+.ground img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;  
+}
+
+/* don't delete following coding */
+/* .eu_batsman_container {
+  position: absolute;
+  top: 240px;  
+  left: 17%;
+  width: 344px;
+  height: 487px;
+  
+  background-image: url("/src/assets/images/eubatsman.png");
+  background-repeat: no-repeat;
+}
+.welcome_text_wrapper {
+  position: absolute;
+  top: 330px;
+  left: 970px;
+  width: 620px;
+  height: 300px;
+}
+.welcome_text_container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+.welcome_text_container_inner {
+  background-color: rgba(6, 8, 59, 0.3);
+  margin: 10px 0;
+  border-radius: 0;
+  padding: 0;
+}
+.h1_even,
+.h1_odd {
+  font-family: oswaldMedium;
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1em;
+  padding: 10px 16px;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+}
+.h1_even {
+  color: #e0ba6a;
+}
+.h1_odd {
+  color: #ffffff;
+}
+.people {
+  display: flex;
+  margin: 40px 0;
+  justify-content: center;
+}
+
+.cardrow {
+  margin-top: 1em;
+}
+
+.text {
+  text-align: left;
+}
+.partners {
+  padding: 40px 0;
+} */
+.sponcers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #131313;
+  height: 100%;
+  padding: 20px;
+}
+.sponcers img {
+  height: 72px;
+  width: 180px;
+  margin: 40px;
+}
+/* .sponcers img:hover {
+  background-color: #000000;
+  border-radius: 100px 50px;
+} */
+.feature_container {
+  width: 100%;  
+  margin: 60px auto;
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+.feature_container h1 {
+  font-family: oswaldMedium;
+  font-size: 5em;
+  font-weight: normal;
+  color: #06083B;
+}
+.feature_container h3 {
+  font-family: bahnschriftRegular;
+  font-size: 3em;
+  font-weight: normal;
+  color: #000000;
+}
+
+.button_container {
+  display: inline-flex;
+  height: 82px;
+  width: 292px;
+  background-color: #06083B;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  font-family: oswaldMedium;
+  font-weight: normal;
+  font-size: 3em;
+  cursor: pointer;
+}
+@media screen and (max-width: 1023px) { 
+  .vertical_line {
+    display: none;
+  }
+  .vertical_text {
+    display: none;
+  }
+}
+@media screen and (max-width: 899px) {
+  .feature_container {
+    text-align: center;
+  } 
+  .feature_container h1 {
+    font-size: 3em;
+  } 
+  .feature_container h3 {
+    font-size: 2em;
+  } 
+  .button_container {
+    display: inline-flex;
+    height: 62px;
+    width: 160px;
+    font-size: 2em;   
+  }
+}

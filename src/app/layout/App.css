@@ -1,0 +1,105 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+  color: #000;
+}
+body {
+  /* background-color: rgb(234, 234, 234) !important; */
+  background-color: #ffffff;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 auto;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 12px;  
+}
+
+.app_body_content {
+  width: 100%;  
+  min-width: 420px;
+  max-width: 1920px;
+  margin: 0 auto;
+  min-height: 100vh; 
+  padding: 0 auto;   
+}
+
+.centered {
+  margin: 0 auto;
+  cursor: pointer;
+}
+.ui.inverted.top.fixed.menu {
+  background-image: linear-gradient(
+    135deg,
+    rgb(24, 42, 115) 0%,
+    rgb(33, 138, 174) 69%,
+    rgb(32, 167, 172) 89%
+  ) !important;
+}
+/*home page styles*/
+
+.masthead {
+  width: 100%;
+  background-image: linear-gradient(
+          135deg,
+          rgb(24, 42, 115) 0%,
+          rgb(33, 138, 174) 69%,
+          rgb(32, 167, 172) 89%
+  ) !important;
+  min-height: 100vh;
+}
+
+.temp_margin {
+  margin-top: 40px;
+}
+/* .masthead .ui.menu .ui.button,
+.ui.menu a.ui.inverted.button {
+  margin-left: 0.5em;
+}
+.masthead h1.ui.header {
+  font-size: 4em;
+  font-weight: normal;
+}
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+} */
+/*end home page styles*/
+
+.new_line_div {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* @font-face {
+  font-family: segoeuiRegular;
+  src: url("../../assets/fonts/segoeui.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: a_RubricaCnBold;
+  src: url("../../assets/fonts/a_RubricaCn Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: bahnschriftRegular;
+  src: url("../../assets/fonts/bahnschrift.ttf") format("truetype");
+}
+@font-face {
+  font-family: openSansRegular;
+  src: url("../../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: oswaldMedium;
+  src: url("../../assets/fonts/Oswald-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: oswaldRegular;
+  src: url("../../assets/fonts/Oswald-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: robotoMedium;
+  src: url("../../assets/fonts/Roboto-Medium.ttf") format("truetype");
+} */

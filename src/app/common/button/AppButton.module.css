@@ -1,0 +1,48 @@
+.button_full {
+    border: 1px solid #000000;
+    background-color: #06083b;
+  }
+
+  .button_full,
+  .button_border,
+  .button_onwait {
+    display: flex;
+    width: 140px;
+    height: 44px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;  
+    border-radius: 0; 
+  }
+
+  .button_border {   
+    border: 1px solid #000000;
+  }
+
+  .button_onwait {    
+    background-color: #e0ba6a;
+    cursor: not-allowed;
+    border: none;    
+  }
+
+  .follow {
+    color: #ffffff;
+  }
+
+  .follow,
+  .onfollow,
+  .onwait {
+    font-family: oswaldMedium;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-decoration: none;
+  }
+  .onfollow {   
+    color: #000000;
+  }
+  
+  .onwait {
+    font-size: 1.4em;    
+    color: #ffffff;
+  }
