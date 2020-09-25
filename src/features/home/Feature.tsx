@@ -1,57 +1,78 @@
-import React, { Fragment } from 'react';
-
-//import { Grid, Segment, Header, Responsive} from 'semantic-ui-react';
-import css from './HomePage.module.css';
-import { toast } from 'react-toastify';
-import { Grid, ListItem, ListIcon, Container, GridColumn } from 'semantic-ui-react';
+import React from 'react';
 import List from '@material-ui/core/List';
 import { makeStyles } from '@material-ui/styles';
-import { ListItemText, Box, Typography } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
+import DoneIcon from '@material-ui/icons/Done';
+import Container from '@material-ui/core/Container';
+import ListItem from '@material-ui/core/ListItem';
+import Skeleton from '@material-ui/lab/Skeleton';
+
 
 const useStyles=makeStyles({
-    red:{background:'red'},
-    yellow:{background:'yellow'},
-    green:{background:'green'},
-    blue:{background:'blue'},
-    orange:{background:'orange'},
-
-    typopgraphy:{
-        color:'#06083b'
+      clubManagement:{
+        padding:10,
+        '& .item':{
+            color:'#6c6c6c',
+            fontSize:'1.125rem',
+            marginBottom: 10, },
+        '& .MuiSvgIcon-root ':{
+            color: '#9fce06',
+            height:35,
+            width:35,
+            marginBottom: -10,
+            marginRight: 10,},
+        '& h4':{
+            color:'#11214b',
+            fontWeight:'700',
+            letterSpacing:'0.01rem',
+            paddingBottom:15,
+            borderBottom: '1px solid #cccccc',
+        },
     },
+    carrier:{
+        padding:10,
+       '& h4':{
+            color:'#11214b',
+            fontWeight:'700',
+            letterSpacing:'0.01rem',
+            paddingBottom:15,
+            borderBottom: '1px solid #cccccc',
+            marginBottom:15,},
+        },
     margin_top:{marginTop:'20px!important'}
 });
-
 export const Feature = () => {
     const classes =useStyles();
     return (
-        <Fragment>
-            <Grid container className={classes.orange}>
-                <Grid item direction ="row" xs={12} className={classes.blue}>
-                        <List className={classes.green}>
-                            
-                            <ListItem><ListItemText primary="Add Player" /></ListItem> 
-                            <ListItem><ListItemText primary="Add Team" /></ListItem> 
-                            <ListItem><ListItemText primary="Tournaments" /></ListItem> 
-                            <ListItem><ListItemText primary="Arrange Tournaments" /></ListItem> 
-                            <ListItem><ListItemText primary="Events" /></ListItem> 
-                            <ListItem><ListItemText primary="FAQ" /></ListItem> 
-                        </List>
-                       
+       <Container maxWidth='lg' >
+          <Grid container  className={`${classes.margin_top}`} justify="center">
+          <Grid item xs={12} sm={6}  alignItems="center" direction="row" className={classes.clubManagement}>
+                         <Typography variant="h4">Club Management
+                            </Typography>
+                        <List >
+                            <ListItem><DoneIcon />Add Player</ListItem> 
+                            <ListItem><DoneIcon /> Add Team</ListItem> 
+                            <ListItem><DoneIcon />Tournaments</ListItem> 
+                            <ListItem><DoneIcon />Arrange Tournaments</ListItem> 
+                            <ListItem><DoneIcon />Events</ListItem> 
+                            <ListItem><DoneIcon />FAQ</ListItem> 
+                        </List>                   
                 </Grid>
-                <Grid xs={12}   direction ="row" className={classes.green}>
-                    <Grid item   className={classes.yellow}><h1 className={classes.typopgraphy}>Jobs are here </h1> </Grid>
-                    <Grid item className={classes.red}>
-                        <List className={classes.green}>
-                            <ListItem><ListItemText primary="Add Player" /></ListItem> 
-                            <ListItem><ListItemText primary="Add Team" /></ListItem> 
-                            <ListItem><ListItemText primary="Tournaments" /></ListItem> 
-                            <ListItem><ListItemText primary="Arrange Tournaments" /></ListItem> 
-                            <ListItem><ListItemText primary="Events" /></ListItem> 
-                            <ListItem><ListItemText primary="FAQ" /></ListItem> 
-                        </List>
-                    </Grid>
+                <Grid item xs={12} sm={6}  alignItems="center" direction="row" className={classes.carrier} >
+                        <Typography variant="h4">Carrier</Typography>
+                        <Skeleton variant="text" height={25} width="90%" />
+                        <Skeleton variant="text" height={40} width="70%" />
+                        <Skeleton variant="text" height={15} width="80%"  />
+
+                        <Skeleton variant="text" height={25} width="90%" />
+                        <Skeleton variant="text" height={40} width="70%" />
+                        <Skeleton variant="text" height={15} width="80%" />
+
+                        <Skeleton variant="text" height={25} width="90%" />
+                        <Skeleton variant="text" height={40} width="70%" />
+                        <Skeleton variant="text" height={15} width="80%" />                  
                 </Grid>
-            </Grid>
-        </Fragment>
+           </Grid>
+     </Container>
     )
 }
